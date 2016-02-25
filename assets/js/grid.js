@@ -1,30 +1,29 @@
-const sample = { 1: '8.333%', 2: '16.666%', 3: '25%', 4: '33.333%', 5: '41.667%', 6: '50%', 7: '58.333%', 8: '66.667%', 9: '75%', 10: '83.333%', 11: '91.667%', 12: '100%' }
+const param = { 0: '0%', 1: '8.333%', 2: '16.666%', 3: '25%', 4: '33.333%', 5: '41.667%', 6: '50%', 7: '58.333%', 8: '66.667%', 9: '75%', 10: '83.333%', 11: '91.667%', 12: '100%' }
 
 class col {
-  constructor(){
-    this.baseParam = {
+  default(colNum) {
+    return Object.assign(this.base(), {
+      'flex-basis': param[colNum],
+      'max-width': param[colNum]
+    });
+  }
+
+  base() {
+    return {
       'box-sizing': 'border-box',
       'flex': '0 0 auto',
-      'padding': '0 1rem',
+      'padding': '0 1rem'
     }
   }
-  default(colNum) {
-    let colParam1 = {
-      'flex-basis': sample[colNum],
-      'max-width': sample[colNum]
-    }
-    return Object.assign(this.baseParam, colParam1);
+
+  offset(colNum) {
+    return Object.assign(this.base(), {
+      'margin-left': param[colNum]
+    })
   }
 }
 
-let colParam = new col();
-console.log(colParam.default(3))
-
-const baseCol = {
-  'box-sizing': 'border-box',
-  'flex': '0 0 auto',
-  'padding': '0 1rem'
-}
+const colParam = new col();
 
 new Descartes({
   '.container': {
@@ -49,7 +48,7 @@ new Descartes({
     'flex-direction': 'column-reverse'
   },
   '.col-xs': {
-    '_mixins': baseCol,
+    '_mixins': colParam.base(),
     'flex-grow': '1',
     'flex-basis': '0',
     'max-width': '100%'
@@ -91,52 +90,40 @@ new Descartes({
     '_mixins': colParam.default(12)
   },
   '.col-xs-offset-0': {
-    '_mixins': baseCol,
-    'margin-left': '0'
+    '_mixins': colParam.offset(0)
   },
   '.col-xs-offset-1': {
-    '_mixins': baseCol,
-    'margin-left': '8.333%'
+    '_mixins': colParam.offset(1)
   },
   '.col-xs-offset-2': {
-    '_mixins': baseCol,
-    'margin-left': '16.667%'
+    '_mixins': colParam.offset(2)
   },
   '.col-xs-offset-3': {
-    '_mixins': baseCol,
-    'margin-left': '25%'
+    '_mixins': colParam.offset(3)
   },
   '.col-xs-offset-4': {
-    '_mixins': baseCol,
-    'margin-left': '33.333%'
+    '_mixins': colParam.offset(4)
   },
   '.col-xs-offset-5': {
-    '_mixins': baseCol,
-    'margin-left': '41.667%'
+    '_mixins': colParam.offset(5)
   },
   '.col-xs-offset-6': {
-    '_mixins': baseCol,
-    'margin-left': '50%'
+    '_mixins': colParam.offset(6)
   },
   '.col-xs-offset-7': {
-    '_mixins': baseCol,
-    'margin-left': '58.333%'
+    '_mixins': colParam.offset(7)
   },
   '.col-xs-offset-8': {
-    '_mixins': baseCol,
-    'margin-left': '66.667%'
+    '_mixins': colParam.offset(8)
   },
   '.col-xs-offset-9': {
-    '_mixins': baseCol,
-    'margin-left': '75%'
+    '_mixins': colParam.offset(9)
   },
   '.col-xs-offset-10': {
-    '_mixins': baseCol,
-    'margin-left': '83.333%'
+    '_mixins': colParam.offset(10)
   },
   '.col-xs-offset-11': {
-    '_mixins': baseCol,
-    'margin-left': '91.667%'
+    '_mixins': colParam.offset(11)
   },
   '.start-xs': {
     'justify-content': 'flex-start',
