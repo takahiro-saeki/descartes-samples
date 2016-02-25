@@ -1,4 +1,4 @@
-#descartes GRID-SYSTEM  
+#descartes grid-system  
 descartesのサンプルリポジトリ  
 グリッドシステムをモジュール化し、汎用的に使用出来るようにする  
 ##グリッドシステムについて  
