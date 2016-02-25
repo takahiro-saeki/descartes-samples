@@ -91,5 +91,57 @@ new Descartes({
     '_mixin': baseCol,
     'flex-basis': '100%',
     'max-width': '100%'
+  },
+  '.col-xs-offset-0': {
+    '_mixin': baseCol,
+    'margin-left': '0'
+  },
+  '.col-xs-offset-1': {
+    '_mixin': baseCol,
+    'margin-left': '8.333%'
+  },
+  '.col-xs-offset-2': {
+    '_mixin': baseCol,
+    'margin-left': '16.667%'
+  },
+  '.col-xs-offset-3': {
+    '_mixin': baseCol,
+    'margin-left': '25%'
+  },
+  '.col-xs-offset-4': {
+    '_mixin': baseCol,
+    'margin-left': '33.333%'
+  },
+  '.col-xs-offset-5': {
+    '_mixin': baseCol,
+    'margin-left': '41.667%'
+  },
+  '.col-xs-offset-6': {
+    '_mixin': baseCol,
+    'margin-left': '50%'
+  },
+  '.col-xs-offset-7': {
+    '_mixin': baseCol,
+    'margin-left': '58.333%'
+  },
+  '.col-xs-offset-8': {
+    '_mixin': baseCol,
+    'margin-left': '66.667%'
+  },
+  '.col-xs-offset-9': {
+    '_mixin': baseCol,
+    'margin-left': '75%'
+  },
+  '.col-xs-offset-10': {
+    '_mixin': baseCol,
+    'margin-left': '0'
+  },
+  '.col-xs-offset-11': {
+    '_mixin': baseCol,
+    'margin-left': '0'
+  },
+  '.col-xs-offset-12': {
+    '_mixin': baseCol,
+    'margin-left': '0'
   }
 })
