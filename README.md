@@ -13,6 +13,10 @@ descartesのサンプルリポジトリ
 ```
 $ sudo npm i
 ```  
+そして以下を入力  
+```
+$ npm start
+```
 ##ディレクトリ一覧  
 ```
 ├── README.md

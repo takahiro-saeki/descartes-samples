@@ -1,5 +1,8 @@
+import method from './method';
+import param from './baseParam';
 
-/*
+let colParam = new method();
+
 const xs = new Descartes({
   '.col-xs': {
     '_mixins': colParam.base(),
@@ -113,4 +116,3 @@ const xs = new Descartes({
     'order': '1'
   }
 })
-*/
