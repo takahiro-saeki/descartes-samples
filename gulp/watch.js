@@ -14,4 +14,5 @@ gulp.task('webserver', () => {
 gulp.task('watch', () => {
   gulp.watch(PATHS.EJS_FULL, ['ejs']);
   gulp.watch(PATHS.JS_FULL, ['js']);
+  gulp.watch(PATHS.JS_COMMON, ['js'])
 });
