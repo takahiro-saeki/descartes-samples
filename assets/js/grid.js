@@ -1,3 +1,19 @@
+const sample = { 1: '8.333%', 2: '16.666%', 3: '25%', 4: '33.333%', 5: '41.667%', 6: '50%', 7: '58.333%', 8: '66.667%', 9: '75%', 10: '83.333%', 11: '91.667%', 12: '100%' }
+class col {
+  constructor() {
+
+  }
+  default(colNum) {
+    let param =  {
+      'box-sizing': 'border-box',
+      'flex': '0 0 auto',
+      'padding': '0 1rem',
+      'flex-basis': sample.colNum + '%',
+      'max-width': sample.colNum + '%'
+    }
+  }
+}
+
 const baseCol = {
   'box-sizing': 'border-box',
   'flex': '0 0 auto',
@@ -134,14 +150,43 @@ new Descartes({
   },
   '.col-xs-offset-10': {
     '_mixin': baseCol,
-    'margin-left': '0'
+    'margin-left': '83.333%'
   },
   '.col-xs-offset-11': {
     '_mixin': baseCol,
-    'margin-left': '0'
+    'margin-left': '91.667%'
   },
-  '.col-xs-offset-12': {
-    '_mixin': baseCol,
-    'margin-left': '0'
+  '.start-xs' {
+    'justify-content': 'flex-start',
+    'text-align': 'start'
+  },
+  '.center-xs' {
+    'justify-content': 'center'
+    'text-align': 'center'
+  },
+  '.end-xs' {
+    'justify-content': 'flex-end'
+    'text-align': 'end'
+  },
+  '.top-xs' {
+    'align-items': 'flex-start'
+  },
+  '.middle-xs' {
+    'align-items': 'center'
+  },
+  '.bottom-xs' {
+    'align-items': 'flex-end'
+  },
+  '.around-xs' {
+    'justify-content': 'space-around'
+  },
+  '.between-xs' {
+    'justify-content': 'space-between'
+  },
+  '.first-xs' {
+    'order': '-1'
+  },
+  '.last-xs' {
+    'order': '1'
   }
 })
