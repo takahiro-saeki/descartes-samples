@@ -1,6 +1,7 @@
+import grid from './grid';
 const BaseFont = '1.8rem';
 
-new Descartes({
+let base = new Descartes({
   'html': {
     'font-size': '62.5%'
   },
