@@ -25,7 +25,11 @@ export default class col {
     })
   }
 
-  resize() {
-
+  colIncrement() {
+    let hogee = new Object();
+    for (let i = 1; i < 11; i++) {
+      hogee[`.col-lg-${ i }`] = {'_mixins': this.default(i)}
+    }
+    console.log(hogee)
   }
 }

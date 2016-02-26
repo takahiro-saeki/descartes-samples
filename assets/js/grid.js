@@ -1,5 +1,9 @@
 import method from './method';
 import param from './baseParam';
+import lg from './col-lg';
+import md from './col-md';
+import sm from './col-sm';
+import xs from './col-xs';
 
 const colParam = new method();
 

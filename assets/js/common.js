@@ -25,5 +25,17 @@ let base = new Descartes({
   },
   '.box': {
     'font-size': BaseFont
+  },
+  '.red': {
+    'background': 'red'
+  },
+  '.yellow': {
+    'background': 'yellow'
+  },
+  '.blue': {
+    'background': 'blue'
+  },
+  '.green': {
+    'background': 'green'
   }
 })
