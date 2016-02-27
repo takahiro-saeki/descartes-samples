@@ -1,6 +1,5 @@
 import grid from './grid';
 import event from './event';
-import xs from './col-xs';
 
 const BaseFont = '1.8rem';
 

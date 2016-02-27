@@ -1,23 +1,3 @@
-/*
-window.onresize = resize;
-function resize(){
-  alert('resizeイベントを検知!');
-}
-
-
-let windowSize = window.innerWidth;
-console.log(windowSize)
-
-let event = new Descartes({
-  '.event': {
-    '_listeners': [
-      [window, 'resize']],
-    'width': if(windowSize > 1000) {
-      'display': 'none'
-    }
-  }
-})
-*/
 const windowXs = window.matchMedia('(max-width:767px)').matches;
 const windowSm = window.matchMedia('(min-width:768px,max-width:1023px)').matches;
 const windowMd = window.matchMedia('(min-width:1024px)').matches;

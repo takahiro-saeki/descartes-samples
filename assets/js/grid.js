@@ -1,13 +1,8 @@
 import method from './method';
 import param from './baseParam';
-import lg from './col-lg';
-import md from './col-md';
-import sm from './col-sm';
-import xs from './col-xs';
 
-const colParam = new method();
-
-let base = new Descartes({
+const test123 = new method();
+let gridAll = () => Object.assign(test123.generate(), {
   '.container': {
     'margin': '0 auto'
   },
@@ -29,4 +24,6 @@ let base = new Descartes({
   '.col.reverse': {
     'flex-direction': 'column-reverse'
   }
-})
+});
+
+let bases = new Descartes(gridAll())
