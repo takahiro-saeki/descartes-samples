@@ -2,7 +2,8 @@ import method from './method';
 import param from './baseParam';
 let colLg = new method();
 
-colLg.colIncrement();
+colLg.colIncrement('lg', 1, 13);
+colLg.options('lg');
 
 const lg = new Descartes({
   '.col-lg': {
